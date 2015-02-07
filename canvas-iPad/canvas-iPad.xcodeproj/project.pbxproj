@@ -13,6 +13,17 @@
 		C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECF1A85A2B700AF545D /* Images.xcassets */; };
 		C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */; };
 		C96F9EDF1A85A2B700AF545D /* canvas_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */; };
+		C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EF81A85A4B500AF545D /* SRWebSocket.m */; };
+		C96F9EFF1A85A54100AF545D /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EFB1A85A54100AF545D /* SocketEvent.swift */; };
+		C96F9F001A85A54100AF545D /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EFC1A85A54100AF545D /* SocketEventHandler.swift */; };
+		C96F9F011A85A54100AF545D /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EFD1A85A54100AF545D /* SocketIOClient.swift */; };
+		C96F9F021A85A54100AF545D /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EFE1A85A54100AF545D /* SwiftRegex.swift */; };
+		C96F9F041A85A59900AF545D /* socketio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F031A85A59900AF545D /* socketio.swift */; };
+		C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F051A85A7F700AF545D /* libicucore.dylib */; };
+		C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F071A85A7FE00AF545D /* CFNetwork.framework */; };
+		C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F091A85A80D00AF545D /* Security.framework */; };
+		C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F0B1A85A81400AF545D /* Foundation.framework */; };
+		C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F0E1A85BC2100AF545D /* canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,20 @@
 		C96F9ED81A85A2B700AF545D /* canvas-iPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "canvas-iPadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96F9EDD1A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canvas_iPadTests.swift; sourceTree = "<group>"; };
+		C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "canvas-iPad-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		C96F9EF71A85A4B500AF545D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		C96F9EF81A85A4B500AF545D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		C96F9EFB1A85A54100AF545D /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
+		C96F9EFC1A85A54100AF545D /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		C96F9EFD1A85A54100AF545D /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		C96F9EFE1A85A54100AF545D /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		C96F9F031A85A59900AF545D /* socketio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketio.swift; sourceTree = "<group>"; };
+		C96F9F051A85A7F700AF545D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C96F9F071A85A7FE00AF545D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C96F9F091A85A80D00AF545D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C96F9F0B1A85A81400AF545D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C96F9F0E1A85BC2100AF545D /* canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */,
+				C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */,
+				C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */,
+				C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +88,9 @@
 		C96F9EBA1A85A2B600AF545D = {
 			isa = PBXGroup;
 			children = (
+				C96F9F0D1A85A81D00AF545D /* Frameworks */,
+				C96F9EFA1A85A54100AF545D /* SwiftIO */,
+				C96F9EF51A85A4B500AF545D /* SocketRocket */,
 				C96F9EC51A85A2B700AF545D /* canvas-iPad */,
 				C96F9EDB1A85A2B700AF545D /* canvas-iPadTests */,
 				C96F9EC41A85A2B700AF545D /* Products */,
@@ -77,9 +109,12 @@
 		C96F9EC51A85A2B700AF545D /* canvas-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */,
 				C96F9EC81A85A2B700AF545D /* AppDelegate.swift */,
+				C96F9F031A85A59900AF545D /* socketio.swift */,
 				C96F9ECA1A85A2B700AF545D /* ViewController.swift */,
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
+				C96F9F0E1A85BC2100AF545D /* canvas.swift */,
 				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
 				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
 				C96F9EC61A85A2B700AF545D /* Supporting Files */,
@@ -110,6 +145,39 @@
 				C96F9EDD1A85A2B700AF545D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C96F9EF51A85A4B500AF545D /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */,
+				C96F9EF71A85A4B500AF545D /* SRWebSocket.h */,
+				C96F9EF81A85A4B500AF545D /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			path = "canvas-iPad/SocketRocket";
+			sourceTree = "<group>";
+		};
+		C96F9EFA1A85A54100AF545D /* SwiftIO */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EFB1A85A54100AF545D /* SocketEvent.swift */,
+				C96F9EFC1A85A54100AF545D /* SocketEventHandler.swift */,
+				C96F9EFD1A85A54100AF545D /* SocketIOClient.swift */,
+				C96F9EFE1A85A54100AF545D /* SwiftRegex.swift */,
+			);
+			path = SwiftIO;
+			sourceTree = "<group>";
+		};
+		C96F9F0D1A85A81D00AF545D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9F0B1A85A81400AF545D /* Foundation.framework */,
+				C96F9F091A85A80D00AF545D /* Security.framework */,
+				C96F9F071A85A7FE00AF545D /* CFNetwork.framework */,
+				C96F9F051A85A7F700AF545D /* libicucore.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */,
+				C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */,
 				C96F9ECB1A85A2B700AF545D /* ViewController.swift in Sources */,
+				C96F9F041A85A59900AF545D /* socketio.swift in Sources */,
+				C96F9F001A85A54100AF545D /* SocketEventHandler.swift in Sources */,
+				C96F9F021A85A54100AF545D /* SwiftRegex.swift in Sources */,
+				C96F9F011A85A54100AF545D /* SocketIOClient.swift in Sources */,
 				C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */,
+				C96F9EFF1A85A54100AF545D /* SocketEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +413,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "canvas-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +426,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "canvas-iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
 			};
 			name = Release;
 		};
