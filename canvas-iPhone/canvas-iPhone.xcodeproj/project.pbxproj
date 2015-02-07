@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = C93611C41A866996000D7EC5 /* Solid_blue.png */; };
+		C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EC81A85A2B700AF545D /* AppDelegate.swift */; };
+		C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */; };
+		C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECC1A85A2B700AF545D /* Main.storyboard */; };
+		C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECF1A85A2B700AF545D /* Images.xcassets */; };
+		C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */; };
+		C96F9EDF1A85A2B700AF545D /* canvas_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */; };
+		C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EF81A85A4B500AF545D /* SRWebSocket.m */; };
+		C96F9F041A85A59900AF545D /* socketio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F031A85A59900AF545D /* socketio.swift */; };
+		C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F051A85A7F700AF545D /* libicucore.dylib */; };
+		C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F071A85A7FE00AF545D /* CFNetwork.framework */; };
+		C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F091A85A80D00AF545D /* Security.framework */; };
+		C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F0B1A85A81400AF545D /* Foundation.framework */; };
+		C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F0E1A85BC2100AF545D /* canvas.swift */; };
+		C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5351A85CCB9001D870D /* SocketEvent.swift */; };
+		C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */; };
+		C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5371A85CCB9001D870D /* SocketIOClient.swift */; };
+		C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5381A85CCB9001D870D /* SwiftRegex.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C96F9ED91A85A2B700AF545D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96F9EBB1A85A2B600AF545D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96F9EC21A85A2B700AF545D;
+			remoteInfo = "canvas-iPad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C93611C41A866996000D7EC5 /* Solid_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Solid_blue.png; sourceTree = "<group>"; };
+		C96F9EC31A85A2B700AF545D /* canvas-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "canvas-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96F9EC81A85A2B700AF545D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		C96F9ECD1A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C96F9ECF1A85A2B700AF545D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C96F9ED21A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C96F9ED81A85A2B700AF545D /* canvas-iPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "canvas-iPhoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96F9EDD1A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canvas_iPadTests.swift; sourceTree = "<group>"; };
+		C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "canvas-iPad-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		C96F9EF71A85A4B500AF545D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		C96F9EF81A85A4B500AF545D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		C96F9F031A85A59900AF545D /* socketio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketio.swift; sourceTree = "<group>"; };
+		C96F9F051A85A7F700AF545D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C96F9F071A85A7FE00AF545D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C96F9F091A85A80D00AF545D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C96F9F0B1A85A81400AF545D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C96F9F0E1A85BC2100AF545D /* canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = canvas.swift; sourceTree = "<group>"; };
+		C98BE5351A85CCB9001D870D /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
+		C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		C98BE5371A85CCB9001D870D /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		C98BE5381A85CCB9001D870D /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C96F9EC01A85A2B700AF545D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */,
+				C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */,
+				C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */,
+				C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96F9ED51A85A2B700AF545D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C96F9EBA1A85A2B600AF545D = {
+			isa = PBXGroup;
+			children = (
+				C98BE5341A85CCB9001D870D /* SwiftIO */,
+				C96F9F0D1A85A81D00AF545D /* Frameworks */,
+				C96F9EF51A85A4B500AF545D /* SocketRocket */,
+				C96F9EC51A85A2B700AF545D /* canvas-iPhone */,
+				C96F9EDB1A85A2B700AF545D /* canvas-iPhoneTests */,
+				C96F9EC41A85A2B700AF545D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C96F9EC41A85A2B700AF545D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EC31A85A2B700AF545D /* canvas-iPhone.app */,
+				C96F9ED81A85A2B700AF545D /* canvas-iPhoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C96F9EC51A85A2B700AF545D /* canvas-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */,
+				C96F9EC81A85A2B700AF545D /* AppDelegate.swift */,
+				C96F9F031A85A59900AF545D /* socketio.swift */,
+				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
+				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
+				C93611C41A866996000D7EC5 /* Solid_blue.png */,
+				C96F9F0E1A85BC2100AF545D /* canvas.swift */,
+				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
+				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
+				C96F9EC61A85A2B700AF545D /* Supporting Files */,
+			);
+			path = "canvas-iPhone";
+			sourceTree = "<group>";
+		};
+		C96F9EC61A85A2B700AF545D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EC71A85A2B700AF545D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C96F9EDB1A85A2B700AF545D /* canvas-iPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */,
+				C96F9EDC1A85A2B700AF545D /* Supporting Files */,
+			);
+			name = "canvas-iPhoneTests";
+			path = "canvas-iPadTests";
+			sourceTree = "<group>";
+		};
+		C96F9EDC1A85A2B700AF545D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EDD1A85A2B700AF545D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C96F9EF51A85A4B500AF545D /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */,
+				C96F9EF71A85A4B500AF545D /* SRWebSocket.h */,
+				C96F9EF81A85A4B500AF545D /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			path = "canvas-iPhone/SocketRocket";
+			sourceTree = "<group>";
+		};
+		C96F9F0D1A85A81D00AF545D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C96F9F0B1A85A81400AF545D /* Foundation.framework */,
+				C96F9F091A85A80D00AF545D /* Security.framework */,
+				C96F9F071A85A7FE00AF545D /* CFNetwork.framework */,
+				C96F9F051A85A7F700AF545D /* libicucore.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C98BE5341A85CCB9001D870D /* SwiftIO */ = {
+			isa = PBXGroup;
+			children = (
+				C98BE5351A85CCB9001D870D /* SocketEvent.swift */,
+				C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */,
+				C98BE5371A85CCB9001D870D /* SocketIOClient.swift */,
+				C98BE5381A85CCB9001D870D /* SwiftRegex.swift */,
+			);
+			path = SwiftIO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C96F9EC21A85A2B700AF545D /* canvas-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96F9EE21A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone" */;
+			buildPhases = (
+				C96F9EBF1A85A2B700AF545D /* Sources */,
+				C96F9EC01A85A2B700AF545D /* Frameworks */,
+				C96F9EC11A85A2B700AF545D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "canvas-iPhone";
+			productName = "canvas-iPad";
+			productReference = C96F9EC31A85A2B700AF545D /* canvas-iPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C96F9ED71A85A2B700AF545D /* canvas-iPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96F9EE51A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhoneTests" */;
+			buildPhases = (
+				C96F9ED41A85A2B700AF545D /* Sources */,
+				C96F9ED51A85A2B700AF545D /* Frameworks */,
+				C96F9ED61A85A2B700AF545D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C96F9EDA1A85A2B700AF545D /* PBXTargetDependency */,
+			);
+			name = "canvas-iPhoneTests";
+			productName = "canvas-iPadTests";
+			productReference = C96F9ED81A85A2B700AF545D /* canvas-iPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C96F9EBB1A85A2B600AF545D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jaehyun Jeon";
+				TargetAttributes = {
+					C96F9EC21A85A2B700AF545D = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 23M9NLYCWJ;
+					};
+					C96F9ED71A85A2B700AF545D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = C96F9EC21A85A2B700AF545D;
+					};
+				};
+			};
+			buildConfigurationList = C96F9EBE1A85A2B700AF545D /* Build configuration list for PBXProject "canvas-iPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C96F9EBA1A85A2B600AF545D;
+			productRefGroup = C96F9EC41A85A2B700AF545D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C96F9EC21A85A2B700AF545D /* canvas-iPhone */,
+				C96F9ED71A85A2B700AF545D /* canvas-iPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C96F9EC11A85A2B700AF545D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
+				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,
+				C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */,
+				C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96F9ED61A85A2B700AF545D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C96F9EBF1A85A2B700AF545D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */,
+				C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */,
+				C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */,
+				C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */,
+				C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */,
+				C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */,
+				C96F9F041A85A59900AF545D /* socketio.swift in Sources */,
+				C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */,
+				C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96F9ED41A85A2B700AF545D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96F9EDF1A85A2B700AF545D /* canvas_iPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C96F9EDA1A85A2B700AF545D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96F9EC21A85A2B700AF545D /* canvas-iPhone */;
+			targetProxy = C96F9ED91A85A2B700AF545D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C96F9ECC1A85A2B700AF545D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96F9ECD1A85A2B700AF545D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96F9ED21A85A2B700AF545D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C96F9EE01A85A2B700AF545D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C96F9EE11A85A2B700AF545D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C96F9EE31A85A2B700AF545D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "canvas-iPad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "canvas-iPhone";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C96F9EE41A85A2B700AF545D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "canvas-iPad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "canvas-iPhone";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C96F9EE61A85A2B700AF545D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "canvas-iPadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "canvas-iPhoneTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad";
+			};
+			name = Debug;
+		};
+		C96F9EE71A85A2B700AF545D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "canvas-iPadTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "canvas-iPhoneTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C96F9EBE1A85A2B700AF545D /* Build configuration list for PBXProject "canvas-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96F9EE01A85A2B700AF545D /* Debug */,
+				C96F9EE11A85A2B700AF545D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96F9EE21A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96F9EE31A85A2B700AF545D /* Debug */,
+				C96F9EE41A85A2B700AF545D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96F9EE51A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96F9EE61A85A2B700AF545D /* Debug */,
+				C96F9EE71A85A2B700AF545D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C96F9EBB1A85A2B600AF545D /* Project object */;
+}
