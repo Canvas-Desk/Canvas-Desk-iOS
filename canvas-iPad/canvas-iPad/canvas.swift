@@ -15,7 +15,7 @@ class canvas: UIView {
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
-    var color:UIColor! = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+    var color:UIColor! = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5)
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -76,17 +76,17 @@ class canvas: UIView {
     }
     
     func getAverageColor(location:CGPoint) {
+        println(location)
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 1.0)
         self.layer.renderInContext(UIGraphicsGetCurrentContext())
         var image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        var cropped:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: location.x-24, y: location.y-24, width: 48, height: 48))
+        var cropped:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: location.x-4, y: location.y-4, width: 8, height: 8))
         var croppedUI:UIImage = UIImage(CGImage: cropped)!
         
-        
         UIImageWriteToSavedPhotosAlbum(croppedUI, nil, nil, nil)
-        
+        println(croppedUI.size)
         getPixelColor(location, image: croppedUI)
         
     }
@@ -94,38 +94,45 @@ class canvas: UIView {
     func getPixelColor(pos: CGPoint, image:UIImage){
         var pixelData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage))
         var data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
-        
-        var totalR = UInt8(0)
-        var totalG = UInt8(0)
-        var totalB = UInt8(0)
-        var totalA = UInt8(0)
-        var count = UInt(0)
+
+        var totalR = UInt32(0)
+        var totalG = UInt32(0)
+        var totalB = UInt32(0)
+        var totalA = UInt32(0)
+        var count = UInt32(0)
         
 //        var pixelInfo: Int = ((Int(image.size.width) * Int(pos.y)) + Int(pos.x)) * 4
 //        println(pos)
 //        println(data[pixelInfo+1])
 //        println(data[pixelInfo+2])
 //        println(data[pixelInfo])
-        
-        for (var i = 0; i<(4*48*48); i+=4) {
+        var r = 0
+        var b = 0
+        var g = 0
+        var a = 0
+        println(CFDataGetLength(pixelData))
+        for (var i = 0; i < 4*8*8; i = i+4) {
                 
-                var r = (data[i])
-                var g = (data[i+1])
-                var b = (data[i+2])
-                var a = (data[i+3])
+                r = Int(data[i+2])
+                g = Int(data[i+1])
+                b = Int(data[i])
+                a = Int(data[i+3])
             
+                println(r)
+                println(g)
+                println(b)
                 
-//                if (r==UInt8(255) && g==UInt8(255) && b==UInt8(255)) {
-//                    
-//                }
-                //else{
+                if (r==255 && g==255 && b==255) {
+                    
+                }
+                else{
                     totalR = totalR + r
                     totalG = totalG + g
                     totalB = totalB + b
                     totalA = totalA + a
-                    count++
-                //}
             
+                    count++
+                }
         }
         
         var red = CGFloat((Float(totalR)/Float(count))/255.0)
@@ -134,7 +141,7 @@ class canvas: UIView {
         var alpha = CGFloat((Float(totalA)/Float(count))/255.0)
         
         println(UIColor(red: red, green: green, blue: blue, alpha: alpha))
-        //self.color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        self.color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
