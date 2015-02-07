@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "canvas-iPad/socketio.swift"
-            timestampString = "445034178.181088"
+            timestampString = "445039875.914491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "ioDelegates()"
             landmarkType = "7">
          </BreakpointContent>

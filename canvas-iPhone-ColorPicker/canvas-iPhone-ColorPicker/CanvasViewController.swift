@@ -8,20 +8,11 @@
 
 import UIKit
 
-//var overlapView:UIWindow!
-
 class CanvasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         println("loaded")
-        
-//        overlapView = UIWindow()
-//        
-//        overlapView.windowLevel = UIWindowLevelStatusBar + 1;
-//        overlapView.frame = UIApplication.sharedApplication().statusBarFrame;
-//        overlapView.backgroundColor = UIColor.greenColor()
-//        overlapView.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     

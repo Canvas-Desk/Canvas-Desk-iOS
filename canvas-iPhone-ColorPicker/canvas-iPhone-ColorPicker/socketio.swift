@@ -13,22 +13,15 @@ var io = SocketIOClient(socketURL: "http://104.236.192.49:8080")
 func ioDelegates(){
     io.on("connect") {data in
         println("connected")
-        io.emit("identify", "iPad")
-//        overlapView.hidden = false
-//        overlapView.hidden = true
+        io.emit("identify","iPhone")
     }
     
     io.on("disconnect") {data in
         println("disconnected")
     }
     
-    io.on("updateBrushSize") {data in
-        println("updateBrushSize")
-        universalCanvas.path.lineWidth = data as CGFloat
-    }
-    
-    io.on("updateColor") {data in
-        println("updateColor")
+    io.on("paletteColor") {data in
+        println("paletteColor")
         var rgb:[CGFloat] = data as [CGFloat]
         println(rgb)
         universalCanvas.color = UIColor(red: rgb[0]/255.0, green: rgb[1]/255.0, blue: rgb[2]/255.0, alpha: 1.0)

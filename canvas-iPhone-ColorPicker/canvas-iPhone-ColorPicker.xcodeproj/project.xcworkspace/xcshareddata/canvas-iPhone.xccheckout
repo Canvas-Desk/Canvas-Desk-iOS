@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7AD8925D-3AA9-488E-884A-2A2AEB33EACA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>canvas-iPhone</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1B5818E7C9EEF9E4139DCF852366F5CF3CB80127</key>
+		<string>https://github.com/jeon97/canvas.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>canvas-iPhone/canvas-iPhone.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1B5818E7C9EEF9E4139DCF852366F5CF3CB80127</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jeon97/canvas.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1B5818E7C9EEF9E4139DCF852366F5CF3CB80127</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1B5818E7C9EEF9E4139DCF852366F5CF3CB80127</string>
+			<key>IDESourceControlWCCName</key>
+			<string>canvas</string>
+		</dict>
+	</array>
+</dict>
+</plist>
