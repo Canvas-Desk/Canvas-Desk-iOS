@@ -1,519 +1,1279 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		C92BFEBF1A86AF4B00FCFCDA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */; };
-		C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = C93611C41A866996000D7EC5 /* Solid_blue.png */; };
-		C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EC81A85A2B700AF545D /* AppDelegate.swift */; };
-		C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */; };
-		C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECC1A85A2B700AF545D /* Main.storyboard */; };
-		C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECF1A85A2B700AF545D /* Images.xcassets */; };
-		C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */; };
-		C96F9EDF1A85A2B700AF545D /* canvas_iPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */; };
-		C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EF81A85A4B500AF545D /* SRWebSocket.m */; };
-		C96F9F041A85A59900AF545D /* socketio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F031A85A59900AF545D /* socketio.swift */; };
-		C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F051A85A7F700AF545D /* libicucore.dylib */; };
-		C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F071A85A7FE00AF545D /* CFNetwork.framework */; };
-		C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F091A85A80D00AF545D /* Security.framework */; };
-		C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F0B1A85A81400AF545D /* Foundation.framework */; };
-		C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5351A85CCB9001D870D /* SocketEvent.swift */; };
-		C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */; };
-		C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5371A85CCB9001D870D /* SocketIOClient.swift */; };
-		C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5381A85CCB9001D870D /* SwiftRegex.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C96F9ED91A85A2B700AF545D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C96F9EBB1A85A2B600AF545D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C96F9EC21A85A2B700AF545D;
-			remoteInfo = "canvas-iPad";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C93611C41A866996000D7EC5 /* Solid_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Solid_blue.png; sourceTree = "<group>"; };
-		C96F9EC31A85A2B700AF545D /* canvas-iPhone-ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "canvas-iPhone-ColorPicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C96F9EC81A85A2B700AF545D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
-		C96F9ECD1A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C96F9ECF1A85A2B700AF545D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C96F9ED21A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C96F9ED81A85A2B700AF545D /* canvas-iPhone-ColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "canvas-iPhone-ColorPickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96F9EDD1A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = canvas_iPhoneTests.swift; path = "canvas-iPhoneTests/canvas_iPhoneTests.swift"; sourceTree = "<group>"; };
-		C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "canvas-iPad-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
-		C96F9EF71A85A4B500AF545D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		C96F9EF81A85A4B500AF545D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		C96F9F031A85A59900AF545D /* socketio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = socketio.swift; sourceTree = "<group>"; };
-		C96F9F051A85A7F700AF545D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		C96F9F071A85A7FE00AF545D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		C96F9F091A85A80D00AF545D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C96F9F0B1A85A81400AF545D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C98BE5351A85CCB9001D870D /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
-		C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
-		C98BE5371A85CCB9001D870D /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
-		C98BE5381A85CCB9001D870D /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C96F9EC01A85A2B700AF545D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */,
-				C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */,
-				C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */,
-				C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C96F9ED51A85A2B700AF545D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		C96F9EBA1A85A2B600AF545D = {
-			isa = PBXGroup;
-			children = (
-				C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */,
-				C98BE5341A85CCB9001D870D /* SwiftIO */,
-				C96F9F0D1A85A81D00AF545D /* Frameworks */,
-				C96F9EF51A85A4B500AF545D /* SocketRocket */,
-				C96F9EC51A85A2B700AF545D /* canvas-iPhone */,
-				C96F9EDB1A85A2B700AF545D /* canvas-iPhoneTests */,
-				C96F9EC41A85A2B700AF545D /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		C96F9EC41A85A2B700AF545D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EC31A85A2B700AF545D /* canvas-iPhone-ColorPicker.app */,
-				C96F9ED81A85A2B700AF545D /* canvas-iPhone-ColorPickerTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C96F9EC51A85A2B700AF545D /* canvas-iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */,
-				C96F9EC81A85A2B700AF545D /* AppDelegate.swift */,
-				C96F9F031A85A59900AF545D /* socketio.swift */,
-				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
-				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
-				C93611C41A866996000D7EC5 /* Solid_blue.png */,
-				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
-				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
-				C96F9EC61A85A2B700AF545D /* Supporting Files */,
-			);
-			name = "canvas-iPhone";
-			path = "canvas-iPhone-ColorPicker";
-			sourceTree = "<group>";
-		};
-		C96F9EC61A85A2B700AF545D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EC71A85A2B700AF545D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C96F9EDB1A85A2B700AF545D /* canvas-iPhoneTests */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */,
-				C96F9EDC1A85A2B700AF545D /* Supporting Files */,
-			);
-			name = "canvas-iPhoneTests";
-			path = "canvas-iPadTests";
-			sourceTree = "<group>";
-		};
-		C96F9EDC1A85A2B700AF545D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EDD1A85A2B700AF545D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C96F9EF51A85A4B500AF545D /* SocketRocket */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */,
-				C96F9EF71A85A4B500AF545D /* SRWebSocket.h */,
-				C96F9EF81A85A4B500AF545D /* SRWebSocket.m */,
-			);
-			name = SocketRocket;
-			path = "canvas-iPhone-ColorPicker/SocketRocket";
-			sourceTree = "<group>";
-		};
-		C96F9F0D1A85A81D00AF545D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C96F9F0B1A85A81400AF545D /* Foundation.framework */,
-				C96F9F091A85A80D00AF545D /* Security.framework */,
-				C96F9F071A85A7FE00AF545D /* CFNetwork.framework */,
-				C96F9F051A85A7F700AF545D /* libicucore.dylib */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C98BE5341A85CCB9001D870D /* SwiftIO */ = {
-			isa = PBXGroup;
-			children = (
-				C98BE5351A85CCB9001D870D /* SocketEvent.swift */,
-				C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */,
-				C98BE5371A85CCB9001D870D /* SocketIOClient.swift */,
-				C98BE5381A85CCB9001D870D /* SwiftRegex.swift */,
-			);
-			path = SwiftIO;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		C96F9EC21A85A2B700AF545D /* canvas-iPhone-ColorPicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C96F9EE21A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone-ColorPicker" */;
-			buildPhases = (
-				C96F9EBF1A85A2B700AF545D /* Sources */,
-				C96F9EC01A85A2B700AF545D /* Frameworks */,
-				C96F9EC11A85A2B700AF545D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "canvas-iPhone-ColorPicker";
-			productName = "canvas-iPad";
-			productReference = C96F9EC31A85A2B700AF545D /* canvas-iPhone-ColorPicker.app */;
-			productType = "com.apple.product-type.application";
-		};
-		C96F9ED71A85A2B700AF545D /* canvas-iPhone-ColorPickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C96F9EE51A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone-ColorPickerTests" */;
-			buildPhases = (
-				C96F9ED41A85A2B700AF545D /* Sources */,
-				C96F9ED51A85A2B700AF545D /* Frameworks */,
-				C96F9ED61A85A2B700AF545D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C96F9EDA1A85A2B700AF545D /* PBXTargetDependency */,
-			);
-			name = "canvas-iPhone-ColorPickerTests";
-			productName = "canvas-iPadTests";
-			productReference = C96F9ED81A85A2B700AF545D /* canvas-iPhone-ColorPickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		C96F9EBB1A85A2B600AF545D /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Jaehyun Jeon";
-				TargetAttributes = {
-					C96F9EC21A85A2B700AF545D = {
-						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 23M9NLYCWJ;
-					};
-					C96F9ED71A85A2B700AF545D = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = C96F9EC21A85A2B700AF545D;
-					};
-				};
-			};
-			buildConfigurationList = C96F9EBE1A85A2B700AF545D /* Build configuration list for PBXProject "canvas-iPhone-ColorPicker" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = C96F9EBA1A85A2B600AF545D;
-			productRefGroup = C96F9EC41A85A2B700AF545D /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				C96F9EC21A85A2B700AF545D /* canvas-iPhone-ColorPicker */,
-				C96F9ED71A85A2B700AF545D /* canvas-iPhone-ColorPickerTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C96F9EC11A85A2B700AF545D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
-				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,
-				C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */,
-				C92BFEBF1A86AF4B00FCFCDA /* Default-568h@2x.png in Resources */,
-				C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C96F9ED61A85A2B700AF545D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		C96F9EBF1A85A2B700AF545D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */,
-				C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */,
-				C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */,
-				C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */,
-				C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */,
-				C96F9F041A85A59900AF545D /* socketio.swift in Sources */,
-				C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */,
-				C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C96F9ED41A85A2B700AF545D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C96F9EDF1A85A2B700AF545D /* canvas_iPhoneTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C96F9EDA1A85A2B700AF545D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C96F9EC21A85A2B700AF545D /* canvas-iPhone-ColorPicker */;
-			targetProxy = C96F9ED91A85A2B700AF545D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C96F9ECC1A85A2B700AF545D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C96F9ECD1A85A2B700AF545D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C96F9ED21A85A2B700AF545D /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		C96F9EE01A85A2B700AF545D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Debug;
-		};
-		C96F9EE11A85A2B700AF545D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C96F9EE31A85A2B700AF545D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "canvas-iPhone-ColorPicker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "canvas-iPhone-ColorPicker";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		C96F9EE41A85A2B700AF545D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "canvas-iPhone-ColorPicker/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "canvas-iPhone-ColorPicker";
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "canvas-iPad-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		C96F9EE61A85A2B700AF545D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "canvas-iPadTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "canvas-iPhone-ColorPickerTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad";
-			};
-			name = Debug;
-		};
-		C96F9EE71A85A2B700AF545D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "canvas-iPadTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "canvas-iPhone-ColorPickerTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		C96F9EBE1A85A2B700AF545D /* Build configuration list for PBXProject "canvas-iPhone-ColorPicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C96F9EE01A85A2B700AF545D /* Debug */,
-				C96F9EE11A85A2B700AF545D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C96F9EE21A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone-ColorPicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C96F9EE31A85A2B700AF545D /* Debug */,
-				C96F9EE41A85A2B700AF545D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C96F9EE51A85A2B700AF545D /* Build configuration list for PBXNativeTarget "canvas-iPhone-ColorPickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C96F9EE61A85A2B700AF545D /* Debug */,
-				C96F9EE71A85A2B700AF545D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = C96F9EBB1A85A2B600AF545D /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>16C0003F87D4AB7589994D8B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>47BA55042200985688E789FF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5397B239ACA641EB3F2E0B96</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BA479B2FCABFA8A94396E81F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5397B239ACA641EB3F2E0B96</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C0D42BBF68108AAF6AE86F18</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C3A8501B4EDDA49E1B2E9BCE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CA68131B22CB4958045FFE3C</string>
+				<string>47BA55042200985688E789FF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C92BFEBE1A86AF4B00FCFCDA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C92BFEBF1A86AF4B00FCFCDA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C92BFEBE1A86AF4B00FCFCDA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C93611C41A866996000D7EC5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Solid_blue.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C93611C51A866997000D7EC5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C93611C41A866996000D7EC5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9EBA1A85A2B600AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C92BFEBE1A86AF4B00FCFCDA</string>
+				<string>C98BE5341A85CCB9001D870D</string>
+				<string>C96F9F0D1A85A81D00AF545D</string>
+				<string>C96F9EF51A85A4B500AF545D</string>
+				<string>C96F9EC51A85A2B700AF545D</string>
+				<string>C96F9EDB1A85A2B700AF545D</string>
+				<string>C96F9EC41A85A2B700AF545D</string>
+				<string>C3A8501B4EDDA49E1B2E9BCE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EBB1A85A2B600AF545D</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Jaehyun Jeon</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>C96F9EC21A85A2B700AF545D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+						<key>DevelopmentTeam</key>
+						<string>23M9NLYCWJ</string>
+					</dict>
+					<key>C96F9ED71A85A2B700AF545D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+						<key>TestTargetID</key>
+						<string>C96F9EC21A85A2B700AF545D</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>C96F9EBE1A85A2B700AF545D</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>C96F9EBA1A85A2B600AF545D</string>
+			<key>productRefGroup</key>
+			<string>C96F9EC41A85A2B700AF545D</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>C96F9EC21A85A2B700AF545D</string>
+				<string>C96F9ED71A85A2B700AF545D</string>
+			</array>
+		</dict>
+		<key>C96F9EBE1A85A2B700AF545D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C96F9EE01A85A2B700AF545D</string>
+				<string>C96F9EE11A85A2B700AF545D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C96F9EBF1A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C98BE5391A85CCB9001D870D</string>
+				<string>C98BE53C1A85CCB9001D870D</string>
+				<string>C96F9EF91A85A4B500AF545D</string>
+				<string>C96F9ECB1A85A2B700AF545D</string>
+				<string>C98BE53A1A85CCB9001D870D</string>
+				<string>C96F9F041A85A59900AF545D</string>
+				<string>C96F9EC91A85A2B700AF545D</string>
+				<string>C98BE53B1A85CCB9001D870D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9EC01A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C96F9F0C1A85A81400AF545D</string>
+				<string>C96F9F0A1A85A80D00AF545D</string>
+				<string>C96F9F081A85A7FE00AF545D</string>
+				<string>C96F9F061A85A7F700AF545D</string>
+				<string>BA479B2FCABFA8A94396E81F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9EC11A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C96F9ECE1A85A2B700AF545D</string>
+				<string>C96F9ED31A85A2B700AF545D</string>
+				<string>C96F9ED01A85A2B700AF545D</string>
+				<string>C92BFEBF1A86AF4B00FCFCDA</string>
+				<string>C93611C51A866997000D7EC5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9EC21A85A2B700AF545D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>C96F9EE21A85A2B700AF545D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>16C0003F87D4AB7589994D8B</string>
+				<string>C96F9EBF1A85A2B700AF545D</string>
+				<string>C96F9EC01A85A2B700AF545D</string>
+				<string>C96F9EC11A85A2B700AF545D</string>
+				<string>C0D42BBF68108AAF6AE86F18</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>canvas-iPhone-ColorPicker</string>
+			<key>productName</key>
+			<string>canvas-iPad</string>
+			<key>productReference</key>
+			<string>C96F9EC31A85A2B700AF545D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>C96F9EC31A85A2B700AF545D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>canvas-iPhone-ColorPicker.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C96F9EC41A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EC31A85A2B700AF545D</string>
+				<string>C96F9ED81A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EC51A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EF21A85A4A200AF545D</string>
+				<string>C96F9EC81A85A2B700AF545D</string>
+				<string>C96F9F031A85A59900AF545D</string>
+				<string>C96F9ECA1A85A2B700AF545D</string>
+				<string>C96F9ECC1A85A2B700AF545D</string>
+				<string>C93611C41A866996000D7EC5</string>
+				<string>C96F9ECF1A85A2B700AF545D</string>
+				<string>C96F9ED11A85A2B700AF545D</string>
+				<string>C96F9EC61A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>canvas-iPhone</string>
+			<key>path</key>
+			<string>canvas-iPhone-ColorPicker</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EC61A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EC71A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EC71A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EC81A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EC91A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9EC81A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9ECA1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>CanvasViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ECB1A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9ECA1A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9ECC1A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9ECD1A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ECD1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ECE1A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9ECC1A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9ECF1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ED01A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9ECF1A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9ED11A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9ED21A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ED21A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9ED31A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9ED11A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9ED41A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C96F9EDF1A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9ED51A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9ED61A85A2B700AF545D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C96F9ED71A85A2B700AF545D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>C96F9EE51A85A2B700AF545D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C96F9ED41A85A2B700AF545D</string>
+				<string>C96F9ED51A85A2B700AF545D</string>
+				<string>C96F9ED61A85A2B700AF545D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>C96F9EDA1A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>canvas-iPhone-ColorPickerTests</string>
+			<key>productName</key>
+			<string>canvas-iPadTests</string>
+			<key>productReference</key>
+			<string>C96F9ED81A85A2B700AF545D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>C96F9ED81A85A2B700AF545D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>canvas-iPhone-ColorPickerTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C96F9ED91A85A2B700AF545D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>C96F9EBB1A85A2B600AF545D</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C96F9EC21A85A2B700AF545D</string>
+			<key>remoteInfo</key>
+			<string>canvas-iPad</string>
+		</dict>
+		<key>C96F9EDA1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>C96F9EC21A85A2B700AF545D</string>
+			<key>targetProxy</key>
+			<string>C96F9ED91A85A2B700AF545D</string>
+		</dict>
+		<key>C96F9EDB1A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EDE1A85A2B700AF545D</string>
+				<string>C96F9EDC1A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>canvas-iPhoneTests</string>
+			<key>path</key>
+			<string>canvas-iPadTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EDC1A85A2B700AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EDD1A85A2B700AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EDD1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EDE1A85A2B700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>canvas_iPhoneTests.swift</string>
+			<key>path</key>
+			<string>canvas-iPhoneTests/canvas_iPhoneTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EDF1A85A2B700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9EDE1A85A2B700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9EE01A85A2B700AF545D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C96F9EE11A85A2B700AF545D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C96F9EE21A85A2B700AF545D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C96F9EE31A85A2B700AF545D</string>
+				<string>C96F9EE41A85A2B700AF545D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C96F9EE31A85A2B700AF545D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CA68131B22CB4958045FFE3C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>canvas-iPhone-ColorPicker/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>canvas-iPhone-ColorPicker</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>canvas-iPad-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C96F9EE41A85A2B700AF545D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>47BA55042200985688E789FF</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>INFOPLIST_FILE</key>
+				<string>canvas-iPhone-ColorPicker/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>canvas-iPhone-ColorPicker</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>canvas-iPad-Bridging-Header.h</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C96F9EE51A85A2B700AF545D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C96F9EE61A85A2B700AF545D</string>
+				<string>C96F9EE71A85A2B700AF545D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C96F9EE61A85A2B700AF545D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>canvas-iPadTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>canvas-iPhone-ColorPickerTests</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C96F9EE71A85A2B700AF545D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>canvas-iPadTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>canvas-iPhone-ColorPickerTests</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/canvas-iPad.app/canvas-iPad</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C96F9EF21A85A4A200AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>canvas-iPad-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C96F9EF51A85A4B500AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9EF61A85A4B500AF545D</string>
+				<string>C96F9EF71A85A4B500AF545D</string>
+				<string>C96F9EF81A85A4B500AF545D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SocketRocket</string>
+			<key>path</key>
+			<string>canvas-iPhone-ColorPicker/SocketRocket</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EF61A85A4B500AF545D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SocketRocket-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EF71A85A4B500AF545D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SRWebSocket.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EF81A85A4B500AF545D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SRWebSocket.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9EF91A85A4B500AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9EF81A85A4B500AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F031A85A59900AF545D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>socketio.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C96F9F041A85A59900AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9F031A85A59900AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F051A85A7F700AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>compiled.mach-o.dylib</string>
+			<key>name</key>
+			<string>libicucore.dylib</string>
+			<key>path</key>
+			<string>usr/lib/libicucore.dylib</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C96F9F061A85A7F700AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9F051A85A7F700AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F071A85A7FE00AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CFNetwork.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CFNetwork.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C96F9F081A85A7FE00AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9F071A85A7FE00AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F091A85A80D00AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C96F9F0A1A85A80D00AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9F091A85A80D00AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F0B1A85A81400AF545D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C96F9F0C1A85A81400AF545D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C96F9F0B1A85A81400AF545D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C96F9F0D1A85A81D00AF545D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C96F9F0B1A85A81400AF545D</string>
+				<string>C96F9F091A85A80D00AF545D</string>
+				<string>C96F9F071A85A7FE00AF545D</string>
+				<string>C96F9F051A85A7F700AF545D</string>
+				<string>5397B239ACA641EB3F2E0B96</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5341A85CCB9001D870D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C98BE5351A85CCB9001D870D</string>
+				<string>C98BE5361A85CCB9001D870D</string>
+				<string>C98BE5371A85CCB9001D870D</string>
+				<string>C98BE5381A85CCB9001D870D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SwiftIO</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5351A85CCB9001D870D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SocketEvent.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5361A85CCB9001D870D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SocketEventHandler.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5371A85CCB9001D870D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SocketIOClient.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5381A85CCB9001D870D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SwiftRegex.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C98BE5391A85CCB9001D870D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C98BE5351A85CCB9001D870D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C98BE53A1A85CCB9001D870D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C98BE5361A85CCB9001D870D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C98BE53B1A85CCB9001D870D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C98BE5371A85CCB9001D870D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C98BE53C1A85CCB9001D870D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C98BE5381A85CCB9001D870D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CA68131B22CB4958045FFE3C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>C96F9EBB1A85A2B600AF545D</string>
+</dict>
+</plist>

@@ -13,7 +13,7 @@ var io = SocketIOClient(socketURL: "http://104.236.192.49:8080")
 func ioDelegates(){
     io.on("connect") {data in
         println("connected")
-        io.emit("identify","ColorPicker")
+        io.emit("identify","picker")
     }
     
     io.on("disconnect") {data in

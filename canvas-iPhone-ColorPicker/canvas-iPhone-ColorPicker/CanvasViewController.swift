@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CanvasViewController: UIViewController {
+class CanvasViewController: UIViewController, FCColorPickerViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,11 @@ class CanvasViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func colorPickerViewController(colorPicker: FCColorPickerViewController, didSelectColor color: UIColor) {
+        var colors = CGColorGetComponents(color.CGColor)
+        io.emit("updatePalette", [Int(colors[0]*255.0), Int(colors[1]*255.0), Int(colors[2]*255.0)])
     }
 
 }
