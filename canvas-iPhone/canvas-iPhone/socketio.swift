@@ -23,6 +23,7 @@ func ioDelegates(){
     io.on("paletteColor") {data in
         println("paletteColor")
         var rgb:[CGFloat] = data as [CGFloat]
-        universalCanvas.color = UIColor(red: rgb[0]/255.0, green: rgb[1]/255.0, blue: rgb[2]/255.0, alpha: rgb[3])
+        println(rgb)
+        universalCanvas.color = UIColor(red: rgb[0]/255.0, green: rgb[1]/255.0, blue: rgb[2]/255.0, alpha: 1.0)
     }
 }

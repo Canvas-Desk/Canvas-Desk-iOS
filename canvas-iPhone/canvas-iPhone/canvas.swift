@@ -85,7 +85,7 @@ class canvas: UIView {
         var cropped:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: location.x-4, y: location.y-4, width: 8, height: 8))
         var croppedUI:UIImage = UIImage(CGImage: cropped)!
         
-        UIImageWriteToSavedPhotosAlbum(croppedUI, nil, nil, nil)
+        //UIImageWriteToSavedPhotosAlbum(croppedUI, nil, nil, nil)
         println(croppedUI.size)
         getPixelColor(location, image: croppedUI)
         
@@ -117,10 +117,6 @@ class canvas: UIView {
                 g = Int(data[i+1])
                 b = Int(data[i])
                 a = Int(data[i+3])
-            
-                println(r)
-                println(g)
-                println(b)
                 
                 if (r==255 && g==255 && b==255) {
                     
@@ -135,12 +131,15 @@ class canvas: UIView {
                 }
         }
         
-        var red = CGFloat((Float(totalR)/Float(count))/255.0)
-        var green = CGFloat((Float(totalG)/Float(count))/255.0)
-        var blue = CGFloat((Float(totalB)/Float(count))/255.0)
-        var alpha = CGFloat((Float(totalA)/Float(count))/255.0)
+        var red = Float(totalR)/Float(count)
+        var green = Float(totalG)/Float(count)
+        var blue = Float(totalB)/Float(count)
+        var alpha = Float(totalA)/Float(count)
         
-        println(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        //println(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        println(red)
+        println(green)
+        println(blue)
         io.emit("mixedColor", [red, green, blue])
     }
     
