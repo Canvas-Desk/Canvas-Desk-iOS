@@ -15,7 +15,7 @@ class canvas: UIView {
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
-    var color:UIColor! = UIColor(red: 0.3, green: 0.6, blue: 0.9, alpha: 0.5)
+    var color:UIColor! = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -81,55 +81,60 @@ class canvas: UIView {
         var image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        var cropped:CGImageRef = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: location.x-24, y: location.y-24, width: 48, height: 48))
+        var croppedUI:UIImage = UIImage(CGImage: cropped)!
         
-        getPixelColor(location, image: image)
+        
+        UIImageWriteToSavedPhotosAlbum(croppedUI, nil, nil, nil)
+        
+        getPixelColor(location, image: croppedUI)
         
     }
     
-    func getPixelColor(pos: CGPoint, image:UIImage) -> UIColor {
+    func getPixelColor(pos: CGPoint, image:UIImage){
         var pixelData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage))
         var data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
         
-        var totalR = CGFloat()
-        var totalG = CGFloat()
-        var totalB = CGFloat()
-        var totalA = CGFloat()
-        var white = CGFloat()
+        var totalR = UInt8(0)
+        var totalG = UInt8(0)
+        var totalB = UInt8(0)
+        var totalA = UInt8(0)
+        var count = UInt(0)
         
-        for (var x=pos.x-25; x<(pos.x+25); x++) {
-            for (var y=pos.y-25; y<(pos.y+25); y++) {
-                var pixelInfo: Int = ((Int(image.size.width) * Int(y)) + Int(x)) * 4
+//        var pixelInfo: Int = ((Int(image.size.width) * Int(pos.y)) + Int(pos.x)) * 4
+//        println(pos)
+//        println(data[pixelInfo+1])
+//        println(data[pixelInfo+2])
+//        println(data[pixelInfo])
+        
+        for (var i = 0; i<(4*48*48); i+=4) {
                 
-                var r = CGFloat(data[pixelInfo])
-                var g = CGFloat(data[pixelInfo+1])
-                var b = CGFloat(data[pixelInfo+2])
-                var a = CGFloat(data[pixelInfo+3])
+                var r = (data[i])
+                var g = (data[i+1])
+                var b = (data[i+2])
+                var a = (data[i+3])
+            
                 
-                println(r)
-                println(b)
-                if (r==0 && g==0 && b==0) {
-                    white++
-                }
-                if (r==255 && g==255 && b==255) {
-                    white++
-                }
-                else{
-                totalR = totalR + r
-                totalG = totalG + g
-                totalB = totalB + b
-                totalA = totalA + a
-                }
-            }
+//                if (r==UInt8(255) && g==UInt8(255) && b==UInt8(255)) {
+//                    
+//                }
+                //else{
+                    totalR = totalR + r
+                    totalG = totalG + g
+                    totalB = totalB + b
+                    totalA = totalA + a
+                    count++
+                //}
+            
         }
         
-        var r = (totalR/(2500-white))/255.0
-        var g = (totalG/(2500-white))/255.0
-        var b = (totalB/(2500-white))/255.0
-        var a = (totalA/(2500-white))/255.0
+        var red = CGFloat((Float(totalR)/Float(count))/255.0)
+        var green = CGFloat((Float(totalG)/Float(count))/255.0)
+        var blue = CGFloat((Float(totalB)/Float(count))/255.0)
+        var alpha = CGFloat((Float(totalA)/Float(count))/255.0)
         
-        println(UIColor(red: r, green: g, blue: b, alpha: a))
-        return UIColor(red: r, green: g, blue: b, alpha: a)
+        println(UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        //self.color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
