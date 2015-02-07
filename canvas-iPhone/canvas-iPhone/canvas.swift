@@ -141,7 +141,7 @@ class canvas: UIView {
         var alpha = CGFloat((Float(totalA)/Float(count))/255.0)
         
         println(UIColor(red: red, green: green, blue: blue, alpha: alpha))
-        io.emit("mixedColor", UIColor(red: red, green: green, blue: blue, alpha: alpha))
+        io.emit("mixedColor", [red, green, blue])
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
