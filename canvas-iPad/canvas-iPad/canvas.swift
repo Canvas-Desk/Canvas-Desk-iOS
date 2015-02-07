@@ -8,14 +8,18 @@
 
 import UIKit
 
+var universalCanvas:canvas!
+
 class canvas: UIView {
     var path:UIBezierPath!
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
+    var color:UIColor! = UIColor.blackColor()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        universalCanvas = self
         self.multipleTouchEnabled = false
         self.backgroundColor = UIColor.whiteColor()
         path = UIBezierPath()
@@ -24,6 +28,7 @@ class canvas: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        universalCanvas = self
         self.multipleTouchEnabled = false
         path = UIBezierPath()
         path.lineWidth = 2.0
@@ -34,6 +39,7 @@ class canvas: UIView {
     // An empty implementation adversely affects performance during animation.
     */
     override func drawRect(rect: CGRect) {
+        color.setStroke()
         incrementalImage.drawInRect(rect)
         path.stroke()
     }
@@ -75,14 +81,13 @@ class canvas: UIView {
     
     func drawBitmap() {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
-        
         if((incrementalImage) != nil) {
             var rectpath:UIBezierPath = UIBezierPath(rect: self.bounds)
             UIColor.whiteColor().setFill()
             rectpath.fill()
         }
         incrementalImage.drawAtPoint(CGPointZero)
-        UIColor.blackColor().setStroke()
+        color.setStroke()
         path.stroke()
         incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

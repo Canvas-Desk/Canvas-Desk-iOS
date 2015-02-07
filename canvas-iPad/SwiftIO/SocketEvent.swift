@@ -62,23 +62,15 @@ class SocketEvent {
     }
     
     class func createMessageForEvent(event:String, withArgs args:[AnyObject],
-        hasBinary:Bool, withDatas datas:Int = 0, toNamespace nsp:String?) -> String {
+        hasBinary:Bool, withDatas datas:Int = 0) -> String {
             
             var message:String
             var jsonSendError:NSError?
             
             if !hasBinary {
-                if nsp == nil {
-                    message = "42[\"\(event)\""
-                } else {
-                    message = "42/\(nsp!),[\"\(event)\""
-                }
+                message = "42[\"\(event)\""
             } else {
-                if nsp == nil {
-                    message = "45\(datas)-[\"\(event)\""
-                } else {
-                    message = "45\(datas)-/\(nsp!),[\"\(event)\""
-                }
+                message = "45\(datas)-[\"\(event)\""
             }
             
             for arg in args {
@@ -117,6 +109,7 @@ class SocketEvent {
                 let mut = RegexMutable(str)
                 if let num = mut["~~(\\d)"].groups() {
                     newArr[i] = self.datas[num[1].toInt()!]
+                    // self.currentPlace++
                 } else {
                     newArr[i] = arr[i]
                 }
@@ -161,7 +154,7 @@ class SocketEvent {
             return self.fillInArray(args as NSArray)
         } else if let string = args as? String {
             if string == "~~\(self.currentPlace)" {
-                return self.datas[0]
+                return self.datas.removeAtIndex(0)
             }
         } else if args is Bool {
             // We have multiple items
@@ -175,9 +168,9 @@ class SocketEvent {
                         let mut = RegexMutable(str)
                         
                         if let num = mut["~~(\\d)"].groups() {
-                            returnArr[i] = self.datas[num[1].toInt()!]
+                            returnArr.append(self.datas[num[1].toInt()!])
                         } else {
-                            returnArr[i] = str
+                            returnArr.append(str)
                         }
                     } else if let arr = parsedArr[i] as? NSArray {
                         returnArr[i] = self.fillInArray(arr)

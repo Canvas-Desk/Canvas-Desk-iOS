@@ -24,25 +24,19 @@
 
 import Foundation
 
-typealias NormalCallback = (AnyObject?) -> Void
-typealias MultipleCallback = (NSArray?) -> Void
-
 class SocketIOClient: NSObject, SRWebSocketDelegate {
     let socketURL:String!
     private let secure:Bool!
     private var handlers = [SocketEventHandler]()
     private var lastSocketMessage:SocketEvent?
     private var pingTimer:NSTimer!
-    var closed = false
     var connected = false
     var connecting = false
     var io:SRWebSocket?
-    var nsp:String?
-    var reconnects = true
+    var reconnnects = true
     var reconnecting = false
     var reconnectAttempts = -1
     var reconnectWait = 10
-    var sid:String?
     
     init(socketURL:String, opts:[String: AnyObject]? = nil) {
         super.init()
@@ -60,7 +54,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         // Set options
         if opts != nil {
             if let reconnects = opts!["reconnects"] as? Bool {
-                self.reconnects = reconnects
+                self.reconnnects = reconnects
             }
             
             if let reconnectAttempts = opts!["reconnectAttempts"] as? Int {
@@ -70,30 +64,21 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
             if let reconnectWait = opts!["reconnectWait"] as? Int {
                 self.reconnectWait = abs(reconnectWait)
             }
-            
-            if let nsp = opts!["nsp"] as? String {
-                self.nsp = nsp
-            }
         }
     }
     
     // Closes the socket
     func close() {
         self.pingTimer?.invalidate()
-        self.closed = true
         self.connecting = false
         self.connected = false
+        self.reconnnects = false
         self.io?.close()
     }
     
     // Connects to the server
     func connect() {
-        if self.closed {
-            println("Warning: This socket was previvously closed. Reopening could be dangerous. Be careful.")
-        }
-        
         self.connecting = true
-        self.closed = false
         var endpoint:String!
         
         if self.secure! {
@@ -177,15 +162,14 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         
         if hasBinary {
             str = SocketEvent.createMessageForEvent(event, withArgs: items,
-                hasBinary: true, withDatas: emitDatas.count, toNamespace: self.nsp)
-            
+                hasBinary: true, withDatas: emitDatas.count)
+
             self.io?.send(str)
             for data in emitDatas {
                 self.io?.send(data)
             }
         } else {
-            str = SocketEvent.createMessageForEvent(event, withArgs: items, hasBinary: false,
-                withDatas: 0, toNamespace: self.nsp)
+            str = SocketEvent.createMessageForEvent(event, withArgs: items, hasBinary: false)
             self.io?.send(str)
         }
     }
@@ -195,30 +179,24 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         // println("Should do event: \(event) with data: \(data)")
         
         for handler in self.handlers {
-            if handler.event == event {
-                if data is NSArray {
-                    handler.executeCallback(nil, items: (data as NSArray))
-                } else {
-                    handler.executeCallback(data)
+            if handler.event == event && !multipleItems {
+                handler.executeCallback(data)
+            } else if handler.event == event && multipleItems {
+                if let arr = data as? [AnyObject] {
+                    handler.executeCallback(arr)
                 }
             }
         }
     }
     
-    private func joinNamespace() {
-        if self.nsp != nil {
-            self.io?.send("40/\(self.nsp!)")
-        }
-    }
-    
     // Adds handler for single arg message
-    func on(name:String, callback:NormalCallback) {
+    func on(name:String, callback:((data:AnyObject?) -> Void)) {
         let handler = SocketEventHandler(event: name, callback: callback)
         self.handlers.append(handler)
     }
     
     // Adds handler for multiple arg message
-    func onMultipleItems(name:String, callback:MultipleCallback) {
+    func onMultipleArgs(name:String, callback:((data:[AnyObject]) -> Void)) {
         let handler = SocketEventHandler(event: name, callback: callback)
         self.handlers.append(handler)
     }
@@ -343,7 +321,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
     }
     
     // Parses messages recieved
-    private func parseSocketMessage(message:AnyObject?) {
+    private func parseSocketMessage(#message:AnyObject?) {
         if message == nil {
             return
         }
@@ -351,20 +329,12 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         // println(message!)
         
         if let stringMessage = message as? String {
-            // Check for successful namepsace connect
-            if self.nsp != nil {
-                if stringMessage == "40/\(self.nsp!)" {
-                    self.handleEvent(event: "connect", data: nil)
-                    return
-                }
-            }
             /**
             Begin check for socket info frame
             **/
             var mutMessage = RegexMutable(stringMessage)
             var setup:String!
             let messageData = mutMessage["(\\d*)(\\{.*\\})?"].groups()
-            
             if messageData != nil && messageData[1] == "0" {
                 setup = messageData[2]
                 let data = setup.dataUsingEncoding(NSUTF8StringEncoding)!
@@ -372,7 +342,6 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                 
                 if let json:AnyObject? = NSJSONSerialization.JSONObjectWithData(data,
                     options: nil, error: &jsonError) {
-                        self.sid = json!["sid"] as? String
                         self.startPingTimer(interval: (json!["pingInterval"] as Int) / 1000)
                         return
                 }
@@ -384,21 +353,9 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
             /**
             Begin check for message
             **/
-            let messageGroups = mutMessage["(\\d*)\\/?(\\w*)?,?(\\[.*\\])?"].groups()
-            
-            if messageGroups[1] == "42" {
-                var namespace:String?
-                var messagePart:String!
-                
-                if messageGroups.count == 4 {
-                    namespace = messageGroups[2]
-                    messagePart = messageGroups[3]
-                }
-                
-                if namespace == "" && self.nsp != nil {
-                    return
-                }
-                
+            let messageGroups = mutMessage["(\\d*)(\\[.*\\])?"].groups()
+            if messageGroups.count == 3 && messageGroups[1] == "42" {
+                let messagePart = messageGroups[2]
                 let messageInternals = RegexMutable(messagePart)["\\[\"(.*?)\",(.*?)?\\]$"].groups()
                 if messageInternals != nil && messageInternals.count > 2 {
                     let event = messageInternals[1]
@@ -420,19 +377,12 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                         // Turn it into a String and run it through
                         // parseData to try and get an array.
                         let asArray = "[\(strData)]"
+                        
                         if let parsed:AnyObject = SocketIOClient.parseData(asArray) {
                             self.handleEvent(event: event, data: parsed, multipleItems: true)
                             return
                         }
                     }
-                }
-                
-                // Check for no item event
-                let noItemMessage = RegexMutable(messagePart)["\\[\"(.*?)\"]$"].groups()
-                if noItemMessage != nil && noItemMessage.count == 2 {
-                    let event = noItemMessage[1]
-                    self.handleEvent(event: event, data: nil, multipleItems: false)
-                    return
                 }
             }
             /**
@@ -445,52 +395,47 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         
         // Message is binary
         if let binary = message as? NSData {
-            if self.lastSocketMessage == nil {
-                return
-            }
-            
             self.parseBinaryData(binary)
         }
     }
     
     // Tries to parse a message that contains binary
     private func parseBinaryMessage(#message:AnyObject) {
-        
-        // println(message)
         if let stringMessage = message as? String {
             var mutMessage = RegexMutable(stringMessage)
             
             /**
             Begin check for binary placeholders
             **/
-            let binaryGroup = mutMessage["(\\d*)-\\/?(\\w*)?,?\\[(\".*?\"),(.*)\\]$"].groups()
+            let binaryGroup = mutMessage["(\\d*)-\\[\"(.*)\",(\\{.*\\})\\]$"].groups()
             
+            // println(binaryGroup)
             if binaryGroup != nil {
-                // println(binaryGroup)
-                var event:String!
-                var mutMessageObject:NSMutableString!
-                var namespace:String?
                 let messageType = RegexMutable(binaryGroup[1])
                 let numberOfPlaceholders = messageType["45"] ~= ""
-                
-                // Check if message came from a namespace
-                if binaryGroup.count == 5 {
-                    namespace = binaryGroup[2]
-                    event = RegexMutable(binaryGroup[3])["\""] ~= ""
-                    mutMessageObject = RegexMutable(binaryGroup[4])
-                }
-                
-                if namespace == "" && self.nsp != nil {
-                    self.lastSocketMessage = nil
-                    return
-                }
-                
+                let event = binaryGroup[2]
+                let mutMessageObject = RegexMutable(binaryGroup[3])
                 let placeholdersRemoved = mutMessageObject["(\\{\"_placeholder\":true,\"num\":(\\d*)\\})"]
                     ~= "\"~~$2\""
-                
                 let mes = SocketEvent(event: event, args: placeholdersRemoved,
                     placeholders: numberOfPlaceholders.integerValue)
                 self.lastSocketMessage = mes
+                return
+            } else {
+                // There are multiple items in binary message
+                let binaryGroups = mutMessage["(\\d*)-\\[(\".*?\"),(.*)\\]$"].groups()
+                if binaryGroups != nil {
+                    let messageType = RegexMutable(binaryGroups[1])
+                    let numberOfPlaceholders = messageType["45"] ~= ""
+                    let event = RegexMutable(binaryGroups[2] as String)["\""] ~= ""
+                    let mutMessageObject = RegexMutable(binaryGroups[3])
+                    let placeholdersRemoved = mutMessageObject["(\\{\"_placeholder\":true,\"num\":(\\d*)\\})"]
+                        ~= "\"~~$2\""
+                    let mes = SocketEvent(event: event, args: placeholdersRemoved,
+                        placeholders: numberOfPlaceholders.integerValue)
+                    self.lastSocketMessage = mes
+                    return
+                }
             }
             /**
             End check for binary placeholders
@@ -510,6 +455,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
                 let filledInArgs:AnyObject = self.lastSocketMessage!.fillInPlaceholders(args)
                 self.handleEvent(event: event, data: filledInArgs)
             } else {
+                // We have multiple items
                 let filledInArgs:AnyObject = self.lastSocketMessage!.fillInPlaceholders()
                 self.handleEvent(event: event, data: filledInArgs, multipleItems: true)
                 return
@@ -517,7 +463,8 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         }
     }
     
-    private func sendPing() {
+    // Sends ping
+    func sendPing() {
         if self.connected {
             self.io?.send("2")
         }
@@ -533,7 +480,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
     private func tryReconnect(var #triesLeft:Int) {
         if triesLeft != -1 && triesLeft <= 0 {
             self.connecting = false
-            self.reconnects = false
+            self.reconnnects = false
             self.reconnecting = false
             self.handleEvent(event: "disconnect", data: "Failed to reconnect")
             return
@@ -551,7 +498,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         
         // Wait reconnectWait seconds and then check if connected. Repeat if not
         dispatch_after(time, dispatch_get_main_queue()) {[weak self] in
-            if self == nil || self!.connected || self!.closed {
+            if self == nil || self!.connected {
                 return
             }
             
@@ -567,22 +514,15 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
     
     // Called when a message is recieved
     func webSocket(webSocket:SRWebSocket!, didReceiveMessage message:AnyObject?) {
-        self.parseSocketMessage(message)
+        // println(message)
+        self.parseSocketMessage(message: message)
     }
     
     // Called when the socket is opened
     func webSocketDidOpen(webSocket:SRWebSocket!) {
-        self.closed = false
         self.connecting = false
         self.reconnecting = false
         self.connected = true
-        
-        if self.nsp != nil {
-            // Join namespace
-            self.joinNamespace()
-            return
-        }
-        
         self.handleEvent(event: "connect", data: nil)
     }
     
@@ -591,7 +531,7 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         self.pingTimer?.invalidate()
         self.connected = false
         self.connecting = false
-        if self.closed || !self.reconnects {
+        if !self.reconnnects {
             self.handleEvent(event: "disconnect", data: reason)
         } else {
             self.handleEvent(event: "reconnect", data: reason)
@@ -600,13 +540,11 @@ class SocketIOClient: NSObject, SRWebSocketDelegate {
         }
     }
     
-    // Called when an error occurs.
     func webSocket(webSocket:SRWebSocket!, didFailWithError error:NSError!) {
         self.pingTimer?.invalidate()
         self.connected = false
         self.connecting = false
-        self.handleEvent(event: "error", data: error.localizedDescription)
-        if self.closed || !self.reconnects {
+        if !self.reconnnects {
             self.handleEvent(event: "disconnect", data: error.localizedDescription)
         } else if !self.reconnecting {
             self.handleEvent(event: "reconnect", data: error.localizedDescription)
