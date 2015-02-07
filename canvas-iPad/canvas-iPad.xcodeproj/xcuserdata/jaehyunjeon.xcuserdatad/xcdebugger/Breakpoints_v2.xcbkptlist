@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "canvas-iPad/canvas.swift"
-            timestampString = "445016744.594904"
+            timestampString = "445017541.322626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "touchesCancelled(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -45,22 +45,6 @@
             timestampString = "445016744.594904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "getAverageColor(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "canvas-iPad/canvas.swift"
-            timestampString = "445016744.594904"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "getAverageColor(_:)"
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "canvas-iPad/canvas.swift"
-            timestampString = "445016744.594904"
+            timestampString = "445017417.384567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "getPixelColor(_:image:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,12 +106,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "canvas-iPad/canvas.swift"
-            timestampString = "445016744.594904"
+            timestampString = "445017417.384567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "getAverageColor(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "canvas-iPad/canvas.swift"
+            timestampString = "445017541.322626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "getPixelColor(_:image:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

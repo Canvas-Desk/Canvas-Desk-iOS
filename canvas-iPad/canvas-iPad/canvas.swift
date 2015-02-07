@@ -23,7 +23,7 @@ class canvas: UIView {
         self.multipleTouchEnabled = false
         self.backgroundColor = UIColor.whiteColor()
         path = UIBezierPath()
-        path.lineWidth = 4.0
+        path.lineWidth = 15.0
     }
     
     override init(frame: CGRect) {
@@ -31,7 +31,7 @@ class canvas: UIView {
         universalCanvas = self
         self.multipleTouchEnabled = false
         path = UIBezierPath()
-        path.lineWidth = 4.0
+        path.lineWidth = 15.0
     }
     
     /*
@@ -76,67 +76,15 @@ class canvas: UIView {
     }
     
     func getAverageColor(location:CGPoint) {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0)
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 1.0)
         self.layer.renderInContext(UIGraphicsGetCurrentContext())
         var image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        var scaled:UIImage = UIImage(CGImage: image.CGImage, scale: 1.0, orientation: image.imageOrientation)!
         
-        getPixelColor(location, image: scaled)
+        //UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         
-//        var rawData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage))
-//        f
-//        var buf:UnsafePointer<UInt8> = CFDataGetBytePtr(rawData)
-//        var length = CFDataGetLength(rawData)
-//        
-//        var totalR = Float(0.0)
-//        var totalG = Float(0.0)
-//        var totalB = Float(0.0)
-//        var totalA = Float(0.0)
-//        var white = 0
-//
-//        for(var i=0; i<length; i+=4)
-//        {
-//            var r = Float(buf[i])
-//            var g = Float(buf[i+1])
-//            var b = Float(buf[i+2])
-//            var a = Float(buf[i+3])
-//            
-//            println(buf[i+3])
-//            if (r==0 && g==0 && b==0) {
-//                white++
-//            }
-//            
-//            totalR+=r
-//            totalG+=g
-//            totalB+=b
-//            totalA+=a
-//        }
-//        
-//        println(totalG)
-//        println(totalR)
-//        var red = (totalR/Float(Int(length)/4-white))/255.0
-//        var green = (totalG/Float(Int(length)/4-white))/255.0
-//        var blue = (totalB/Float(Int(length)/4-white))/255.0
-//        var alpha = (totalA/Float(Int(length)/4-white))/255.0
-//        
-//        println(green)
-//        if red > 1 {
-//            red = 1
-//        }
-//        if green > 1 {
-//            green = 1
-//        }
-//        if blue > 1 {
-//            blue = 1
-//        }
-//        if alpha > 1 {
-//            alpha = 1
-//        }
-//        var color:UIColor =  UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
-//        
-//        println(color)
-        //self.color = color
+        getPixelColor(location, image: image)
+        
     }
     
     func getPixelColor(pos: CGPoint, image:UIImage) -> UIColor {
@@ -163,18 +111,22 @@ class canvas: UIView {
                 if (r==0 && g==0 && b==0) {
                     white++
                 }
-                
+                if (r==255 && g==255 && b==255) {
+                    white++
+                }
+                else{
                 totalR = totalR + r
                 totalG = totalG + g
                 totalB = totalB + b
                 totalA = totalA + a
+                }
             }
         }
         
-        var r = totalR/(2500-white)
-        var g = totalG/(2500-white)
-        var b = totalB/(2500-white)
-        var a = totalA/(2500-white)
+        var r = (totalR/(2500-white))/255.0
+        var g = (totalG/(2500-white))/255.0
+        var b = (totalB/(2500-white))/255.0
+        var a = (totalA/(2500-white))/255.0
         
         println(UIColor(red: r, green: g, blue: b, alpha: a))
         return UIColor(red: r, green: g, blue: b, alpha: a)

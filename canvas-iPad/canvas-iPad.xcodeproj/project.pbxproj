@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = C93611C41A866996000D7EC5 /* Solid_blue.png */; };
+		C93611CB1A8673FE000D7EC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93611CA1A8673FE000D7EC5 /* ViewController.m */; };
 		C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EC81A85A2B700AF545D /* AppDelegate.swift */; };
 		C96F9ECB1A85A2B700AF545D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9ECA1A85A2B700AF545D /* ViewController.swift */; };
 		C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECC1A85A2B700AF545D /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		C93611C41A866996000D7EC5 /* Solid_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Solid_blue.png; sourceTree = "<group>"; };
+		C93611C91A8673EF000D7EC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C93611CA1A8673FE000D7EC5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C96F9EC31A85A2B700AF545D /* canvas-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "canvas-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C96F9EC81A85A2B700AF545D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
 				C93611C41A866996000D7EC5 /* Solid_blue.png */,
 				C96F9F0E1A85BC2100AF545D /* canvas.swift */,
+				C93611C91A8673EF000D7EC5 /* ViewController.h */,
+				C93611CA1A8673FE000D7EC5 /* ViewController.m */,
 				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
 				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
 				C96F9EC61A85A2B700AF545D /* Supporting Files */,
@@ -290,6 +295,7 @@
 				C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */,
 				C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */,
 				C96F9ECB1A85A2B700AF545D /* ViewController.swift in Sources */,
+				C93611CB1A8673FE000D7EC5 /* ViewController.m in Sources */,
 				C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */,
 				C96F9F041A85A59900AF545D /* socketio.swift in Sources */,
 				C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */,
