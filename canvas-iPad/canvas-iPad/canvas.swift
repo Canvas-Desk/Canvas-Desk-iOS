@@ -74,8 +74,21 @@ class canvas: UIView {
         path.removeAllPoints()
         ctr = 0
         var touch:UITouch = touches.anyObject() as UITouch
-        println(touch.locationInView(self))
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.view.opaque, 0.0)
+        getAverageColor(touch.locationInView(self))
+    }
+    
+    func getAverageColor(location:CGPoint) {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0)
+        self.layer.renderInContext(UIGraphicsGetCurrentContext())
+        var image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        var cgImage:CGImage = CGImageCreateWithImageInRect(image.CGImage, CGRect(x: location.x-25.0, y: location.y-25.0, width: 50.0, height: 50.0))
+        
+        var rawData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage))
+        
+        var buf:UnsafePointer<UInt8> = CFDataGetBytePtr(rawData)
+        
         
     }
     
