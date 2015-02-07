@@ -21,7 +21,6 @@
 		C96F9F081A85A7FE00AF545D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F071A85A7FE00AF545D /* CFNetwork.framework */; };
 		C96F9F0A1A85A80D00AF545D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F091A85A80D00AF545D /* Security.framework */; };
 		C96F9F0C1A85A81400AF545D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F0B1A85A81400AF545D /* Foundation.framework */; };
-		C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F0E1A85BC2100AF545D /* canvas.swift */; };
 		C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5351A85CCB9001D870D /* SocketEvent.swift */; };
 		C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */; };
 		C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5371A85CCB9001D870D /* SocketIOClient.swift */; };
@@ -60,7 +59,6 @@
 		C96F9F071A85A7FE00AF545D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C96F9F091A85A80D00AF545D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C96F9F0B1A85A81400AF545D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C96F9F0E1A85BC2100AF545D /* canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = canvas.swift; sourceTree = "<group>"; };
 		C98BE5351A85CCB9001D870D /* SocketEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEvent.swift; sourceTree = "<group>"; };
 		C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
 		C98BE5371A85CCB9001D870D /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
 				C93611C41A866996000D7EC5 /* Solid_blue.png */,
-				C96F9F0E1A85BC2100AF545D /* canvas.swift */,
 				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
 				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
 				C96F9EC61A85A2B700AF545D /* Supporting Files */,
@@ -291,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96F9F0F1A85BC2100AF545D /* canvas.swift in Sources */,
 				C98BE5391A85CCB9001D870D /* SocketEvent.swift in Sources */,
 				C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */,
 				C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */,
