@@ -15,7 +15,7 @@ class canvas: UIView {
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
-    var color:UIColor! = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.5)
+    var color:UIColor! = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.2)
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -23,7 +23,7 @@ class canvas: UIView {
         self.multipleTouchEnabled = false
         self.backgroundColor = UIColor.whiteColor()
         path = UIBezierPath()
-        path.lineWidth = 15.0
+        path.lineWidth = 40.0
     }
     
     override init(frame: CGRect) {
@@ -31,7 +31,7 @@ class canvas: UIView {
         universalCanvas = self
         self.multipleTouchEnabled = false
         path = UIBezierPath()
-        path.lineWidth = 15.0
+        path.lineWidth = 40.0
     }
     
     /*
@@ -140,7 +140,9 @@ class canvas: UIView {
         println(red)
         println(green)
         println(blue)
-        io.emit("mixedColor", [red, green, blue])
+        if !red.isNaN && !green.isNaN && !blue.isNaN {
+            io.emit("mixedColor", [red, green, blue])
+        }
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
