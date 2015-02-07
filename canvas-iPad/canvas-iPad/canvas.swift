@@ -73,6 +73,10 @@ class canvas: UIView {
         self.setNeedsDisplay()
         path.removeAllPoints()
         ctr = 0
+        var touch:UITouch = touches.anyObject() as UITouch
+        println(touch.locationInView(self))
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.view.opaque, 0.0)
+        
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
