@@ -69,12 +69,13 @@ class canvas: UIView {
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+        var touch:UITouch = touches.anyObject() as UITouch
+        getAverageColor(touch.locationInView(self))
         self.drawBitmap()
         self.setNeedsDisplay()
         path.removeAllPoints()
         ctr = 0
-        var touch:UITouch = touches.anyObject() as UITouch
-        getAverageColor(touch.locationInView(self))
+        
     }
     
     func getAverageColor(location:CGPoint) {
@@ -88,8 +89,55 @@ class canvas: UIView {
         var rawData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage))
         
         var buf:UnsafePointer<UInt8> = CFDataGetBytePtr(rawData)
+        var length = CFDataGetLength(rawData)
         
+        var totalR = Float(0.0)
+        var totalG = Float(0.0)
+        var totalB = Float(0.0)
+        var totalA = Float(0.0)
+        var white = 0
+
+        for(var i=0; i<length; i+=4)
+        {
+            var r = Float(buf[i])
+            var g = Float(buf[i+1])
+            var b = Float(buf[i+2])
+            var a = Float(buf[i+3])
+            
+            println(g)
+            if (r==0 && g==0 && b==0) {
+                white++
+            }
+            
+            totalR+=r
+            totalG+=g
+            totalB+=b
+            totalA+=a
+        }
+        println(totalG)
+        println(totalR)
+        var red = (totalR/Float(Int(length)/4-white))/255.0
+        var green = (totalG/Float(Int(length)/4-white))/255.0
+        var blue = (totalB/Float(Int(length)/4-white))/255.0
+        var alpha = (totalA/Float(Int(length)/4-white))/255.0
         
+        println(green)
+        if red > 1 {
+            red = 1
+        }
+        if green > 1 {
+            green = 1
+        }
+        if blue > 1 {
+            blue = 1
+        }
+        if alpha > 1 {
+            alpha = 1
+        }
+        var color:UIColor =  UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
+        
+        println(color)
+        //self.color = color
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
