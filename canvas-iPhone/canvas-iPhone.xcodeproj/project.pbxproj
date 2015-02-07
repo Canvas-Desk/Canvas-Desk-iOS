@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92BFEBF1A86AF4B00FCFCDA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */; };
 		C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = C93611C41A866996000D7EC5 /* Solid_blue.png */; };
 		C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EC81A85A2B700AF545D /* AppDelegate.swift */; };
 		C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */; };
 		C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECC1A85A2B700AF545D /* Main.storyboard */; };
 		C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECF1A85A2B700AF545D /* Images.xcassets */; };
 		C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */; };
-		C96F9EDF1A85A2B700AF545D /* canvas_iPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */; };
+		C96F9EDF1A85A2B700AF545D /* canvas_iPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */; };
 		C96F9EF91A85A4B500AF545D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EF81A85A4B500AF545D /* SRWebSocket.m */; };
 		C96F9F041A85A59900AF545D /* socketio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9F031A85A59900AF545D /* socketio.swift */; };
 		C96F9F061A85A7F700AF545D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F9F051A85A7F700AF545D /* libicucore.dylib */; };
@@ -38,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C93611C41A866996000D7EC5 /* Solid_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Solid_blue.png; sourceTree = "<group>"; };
 		C96F9EC31A85A2B700AF545D /* canvas-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "canvas-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../canvas-iPhoneTests/Info.plist"; sourceTree = "<group>"; };
 		C96F9EC81A85A2B700AF545D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		C96F9ECD1A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 		C96F9ED21A85A2B700AF545D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C96F9ED81A85A2B700AF545D /* canvas-iPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "canvas-iPhoneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96F9EDD1A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canvas_iPadTests.swift; sourceTree = "<group>"; };
+		C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = canvas_iPhoneTests.swift; path = "canvas-iPhoneTests/canvas_iPhoneTests.swift"; sourceTree = "<group>"; };
 		C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "canvas-iPad-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		C96F9EF61A85A4B500AF545D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		C96F9EF71A85A4B500AF545D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		C96F9EBA1A85A2B600AF545D = {
 			isa = PBXGroup;
 			children = (
+				C92BFEBE1A86AF4B00FCFCDA /* Default-568h@2x.png */,
 				C98BE5341A85CCB9001D870D /* SwiftIO */,
 				C96F9F0D1A85A81D00AF545D /* Frameworks */,
 				C96F9EF51A85A4B500AF545D /* SocketRocket */,
@@ -136,7 +139,7 @@
 		C96F9EDB1A85A2B700AF545D /* canvas-iPhoneTests */ = {
 			isa = PBXGroup;
 			children = (
-				C96F9EDE1A85A2B700AF545D /* canvas_iPadTests.swift */,
+				C96F9EDE1A85A2B700AF545D /* canvas_iPhoneTests.swift */,
 				C96F9EDC1A85A2B700AF545D /* Supporting Files */,
 			);
 			name = "canvas-iPhoneTests";
@@ -268,6 +271,7 @@
 				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
 				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,
 				C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */,
+				C92BFEBF1A86AF4B00FCFCDA /* Default-568h@2x.png in Resources */,
 				C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96F9EDF1A85A2B700AF545D /* canvas_iPadTests.swift in Sources */,
+				C96F9EDF1A85A2B700AF545D /* canvas_iPhoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +426,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "canvas-iPad/Info.plist";
+				INFOPLIST_FILE = "canvas-iPhone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "canvas-iPhone";
 				PROVISIONING_PROFILE = "";
@@ -439,7 +443,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "canvas-iPad/Info.plist";
+				INFOPLIST_FILE = "canvas-iPhone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "canvas-iPhone";
 				PROVISIONING_PROFILE = "";
