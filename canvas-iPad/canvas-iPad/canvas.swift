@@ -15,19 +15,20 @@ class canvas: UIView {
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
-    var tool = ""
+    var tool = 1
     var color:UIColor! = UIColor.blackColor()
     var lineWidth:CGFloat! = CGFloat(5.0)
-    var prevPoint:CGPoint!
-    var currentPoint:CGPoint!
-    var texture:UIImage = UIImage(named: "brush.png")!
-    
-    var textures:NSMutableArray! = NSMutableArray(capacity: 50)
-    var rectangles : [CGRect] = []
+    var texture:UIImage!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         universalCanvas = self
+        if tool == 2 {
+            texture = UIImage(named: "brush2.png")
+        }
+        if tool == 3 {
+            texture = UIImage(named: "brush3.png")
+        }
         self.multipleTouchEnabled = false
         self.backgroundColor = UIColor.whiteColor()
         path = UIBezierPath()
@@ -36,13 +37,13 @@ class canvas: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        println("hi")
+        //texture = texture.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         universalCanvas = self
         self.multipleTouchEnabled = false
         path = UIBezierPath()
         path.lineWidth = lineWidth
     }
-    
-    
     
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -50,14 +51,11 @@ class canvas: UIView {
     */
     override func drawRect(rect: CGRect) {
         //UIColor(patternImage: UIImage(named: "brush.png")!).setStroke()
-        if tool == "bezier" {
+        if tool == 1 {
             color.setStroke()
             path.lineCapStyle = kCGLineCapRound
             incrementalImage.drawInRect(rect)
             path.stroke()
-        } else {
-            
-            
         }
         println("drawRect")
     }
@@ -65,11 +63,9 @@ class canvas: UIView {
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         var touch:UITouch = touches.anyObject() as UITouch
         var p:CGPoint = touch.locationInView(self)
-        if tool == "bezier" {
+        if tool == 1 {
             ctr = 0
             pts[0] = p
-        } else {
-            prevPoint = p
         }
         println("touchesBegan")
     }
@@ -78,7 +74,7 @@ class canvas: UIView {
         var touch:UITouch = touches.anyObject() as UITouch
         var p:CGPoint = touch.locationInView(self)
         
-        if tool == "bezier" {
+        if tool == 1 {
             ctr++
             pts[ctr] = p
             if ctr == 4 {
@@ -91,39 +87,19 @@ class canvas: UIView {
                 ctr = 1
             }
         } else {
-            self.setNeedsDisplay()
-            currentPoint = p
+            UIGraphicsBeginImageContext(self.frame.size)
             
+            var iv = UIImageView(frame: CGRect(x: p.x-25, y: p.y-25, width: 50, height: 50))
+            iv.image = texture
+            self.addSubview(iv)
             
-            if (currentPoint != nil && prevPoint != nil) {
-                UIGraphicsBeginImageContext(self.frame.size)
-                
-//                var vector:CGPoint = CGPointMake(currentPoint.x-prevPoint.x, currentPoint.y-prevPoint.y)
-//                var distance:CGFloat = CGFloat(hypotf(Float(vector.x), Float(vector.y)))
-//                vector.x /= distance
-//                vector.y /= distance
-                //var point:CGPoint!
-//                for (var i:CGFloat = 0.0; i < distance; i += 1.0) {
-//                    point = CGPointMake(currentPoint.x + i * vector.x, currentPoint.y + i * vector.y)
-//                    //texture.drawInRect(CGRect(origin: CGPoint(x: point.x-5,y: point.y-5), size: CGSize(width: 10.0, height: 10.0)))
-//                    texture.drawAtPoint(point, blendMode: kCGBlendModeNormal, alpha: 1.0)
-//                }
-                
-                var iv = UIImageView(frame: CGRect(x: p.x-10, y: p.y-10, width: 20, height: 20))
-                iv.image = texture
-                self.addSubview(iv)
-                
-                UIGraphicsEndImageContext()
-                prevPoint = currentPoint
-            }
-
-            
+            UIGraphicsEndImageContext()
         }
         println("touchesMoved")
     }
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        if tool == "bezier" {
+        if tool == 1 {
             self.drawBitmap(touches)
             self.setNeedsDisplay()
             path.removeAllPoints()
@@ -139,18 +115,16 @@ class canvas: UIView {
             }
             self.addSubview(UIImageView(image: image))
         }
-        
         println("touchesEnded")
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
         self.touchesEnded(touches, withEvent: event)
-        
         println("touchesCancelled")
     }
     
     func drawBitmap(touches: NSSet) {
-        if tool == "bezier" {
+        if tool == 1 {
             UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
             if((incrementalImage) != nil) {
                 var rectpath:UIBezierPath = UIBezierPath(rect: self.bounds)
