@@ -38,6 +38,24 @@ class canvas: UIView {
         path.lineWidth = lineWidth
     }
     
+    override init() {
+        super.init()
+        universalCanvas = self
+        if tool == 2 {
+            texture = UIImage(named: "brush2.png")
+        }
+        else if tool == 3 {
+            texture = UIImage(named: "brush3.png")
+        }
+        else if tool == 4 {
+            texture = UIImage(named: "eraser.png")
+        }
+        self.multipleTouchEnabled = false
+        self.backgroundColor = UIColor.whiteColor()
+        path = UIBezierPath()
+        path.lineWidth = lineWidth
+    }
+    
     func setTexture() {
         if tool == 2 {
             texture = UIImage(named: "brush2.png")

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+var viewController:CanvasViewController!
 
 class CanvasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         println("loaded")
+        viewController = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -20,6 +22,9 @@ class CanvasViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func clearCanvas() {
+        self.view = canvas()
+    }
 }
 

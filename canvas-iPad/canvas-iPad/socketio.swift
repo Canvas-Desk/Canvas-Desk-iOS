@@ -48,4 +48,8 @@ func ioDelegates(){
         universalCanvas.tool = 5
         universalCanvas.texture = image
     }
+    
+    io.on("clear") {data in
+        viewController.clearCanvas()
+    }
 }

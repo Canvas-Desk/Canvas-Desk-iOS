@@ -30,6 +30,16 @@ class canvas: UIView {
         super.init(frame: frame)
         universalCanvas = self
         self.multipleTouchEnabled = false
+        self.backgroundColor = UIColor.whiteColor()
+        path = UIBezierPath()
+        path.lineWidth = 40.0
+    }
+    
+    override init() {
+        super.init()
+        universalCanvas = self
+        self.multipleTouchEnabled = false
+        self.backgroundColor = UIColor.whiteColor()
         path = UIBezierPath()
         path.lineWidth = 40.0
     }

@@ -26,4 +26,8 @@ func ioDelegates(){
         println(rgb)
         universalCanvas.color = UIColor(red: rgb[0]/255.0, green: rgb[1]/255.0, blue: rgb[2]/255.0, alpha: 0.2)
     }
+    
+    io.on("clearPalette") {data in
+        viewController.clearCanvas()
+    }
 }

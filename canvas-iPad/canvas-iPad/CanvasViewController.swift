@@ -8,7 +8,7 @@
 
 import UIKit
 
-//var overlapView:UIWindow!
+var viewController:CanvasViewController!
 
 class CanvasViewController: UIViewController {
 
@@ -16,6 +16,7 @@ class CanvasViewController: UIViewController {
         super.viewDidLoad()
         println("loaded")
         
+        viewController = self
 //        overlapView = UIWindow()
 //        
 //        overlapView.windowLevel = UIWindowLevelStatusBar + 1;
@@ -25,6 +26,9 @@ class CanvasViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    func clearCanvas() {
+        self.view = canvas()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
