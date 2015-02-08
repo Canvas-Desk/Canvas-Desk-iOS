@@ -15,11 +15,14 @@ class canvas: UIView {
     var incrementalImage:UIImage! = UIImage()
     var pts:[CGPoint]! = [CGPoint(), CGPoint(), CGPoint(), CGPoint(), CGPoint()]
     var ctr = 0
-    var tool = "bezier"
+    var tool = ""
     var color:UIColor! = UIColor.blackColor()
     var lineWidth:CGFloat! = CGFloat(5.0)
     var prevPoint:CGPoint!
     var currentPoint:CGPoint!
+    
+    var textures:NSMutableArray! = NSMutableArray(capacity: 50)
+    var rectangles : [CGRect] = []
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,6 +41,8 @@ class canvas: UIView {
         path.lineWidth = lineWidth
     }
     
+    
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -50,7 +55,12 @@ class canvas: UIView {
             incrementalImage.drawInRect(rect)
             path.stroke()
         } else {
+            
+            if (incrementalImage != nil) {
             incrementalImage.drawInRect(rect)
+            }
+            
+            
             if (currentPoint != nil && prevPoint != nil) {
             //UIGraphicsBeginImageContext(self.frame.size)
             var texture:UIImage = UIImage(named: "brush.png")!
@@ -63,11 +73,31 @@ class canvas: UIView {
                 point = CGPointMake(currentPoint.x + i * vector.x, currentPoint.y + i * vector.y)
                 //texture.drawInRect(CGRect(origin: CGPoint(x: point.x-5,y: point.y-5), size: CGSize(width: 10.0, height: 10.0)))
                 texture.drawAtPoint(point, blendMode: kCGBlendModeNormal, alpha: 1.0)
+
             }
+            
             //UIGraphicsEndImageContext()
             prevPoint = currentPoint
                 //move to here
-            
+                //UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
+//                if((incrementalImage) != nil) {
+//                    var rectpath:UIBezierPath = UIBezierPath(rect: self.bounds)
+//                    UIColor.whiteColor().setFill()
+//                    rectpath.fill()
+//                }
+                
+                if (incrementalImage != nil) {
+                incrementalImage.drawAtPoint(CGPointZero)
+                }
+                
+                //UIColor(patternImage: UIImage(named: "brush.png")!).setStroke()
+                
+                //UIGraphicsEndImageContext()
+
+                incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
+                
+
+                
             }
             
         }
@@ -116,6 +146,7 @@ class canvas: UIView {
             path.removeAllPoints()
             ctr = 0
         }
+        
         println("touchesEnded")
     }
     
