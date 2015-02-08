@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = C93611C41A866996000D7EC5 /* Solid_blue.png */; };
 		C96F9EC91A85A2B700AF545D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9EC81A85A2B700AF545D /* AppDelegate.swift */; };
 		C96F9ECB1A85A2B700AF545D /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */; };
 		C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C96F9ECC1A85A2B700AF545D /* Main.storyboard */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C93611C41A866996000D7EC5 /* Solid_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Solid_blue.png; sourceTree = "<group>"; };
 		C96F9EC31A85A2B700AF545D /* canvas-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "canvas-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96F9EC71A85A2B700AF545D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C96F9EC81A85A2B700AF545D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				C96F9F031A85A59900AF545D /* socketio.swift */,
 				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
-				C93611C41A866996000D7EC5 /* Solid_blue.png */,
 				C96F9F0E1A85BC2100AF545D /* canvas.swift */,
 				C96F9ECF1A85A2B700AF545D /* Images.xcassets */,
 				C96F9ED11A85A2B700AF545D /* LaunchScreen.xib */,
@@ -267,7 +264,6 @@
 				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
 				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,
 				C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */,
-				C93611C51A866997000D7EC5 /* Solid_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
