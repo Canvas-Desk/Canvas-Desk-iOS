@@ -20,6 +20,7 @@ class canvas: UIView {
     var lineWidth:CGFloat! = CGFloat(5.0)
     var prevPoint:CGPoint!
     var currentPoint:CGPoint!
+    var texture:UIImage = UIImage(named: "brush.png")!
     
     var textures:NSMutableArray! = NSMutableArray(capacity: 50)
     var rectangles : [CGRect] = []
@@ -56,49 +57,6 @@ class canvas: UIView {
             path.stroke()
         } else {
             
-            if (incrementalImage != nil) {
-            incrementalImage.drawInRect(rect)
-            }
-            
-            
-            if (currentPoint != nil && prevPoint != nil) {
-            //UIGraphicsBeginImageContext(self.frame.size)
-            var texture:UIImage = UIImage(named: "brush.png")!
-            var vector:CGPoint = CGPointMake(currentPoint.x-prevPoint.x, currentPoint.y-prevPoint.y)
-            var distance:CGFloat = CGFloat(hypotf(Float(vector.x), Float(vector.y)))
-            vector.x /= distance
-            vector.y /= distance
-            var point:CGPoint!
-            for (var i:CGFloat = 0.0; i < distance; i += 1.0) {
-                point = CGPointMake(currentPoint.x + i * vector.x, currentPoint.y + i * vector.y)
-                //texture.drawInRect(CGRect(origin: CGPoint(x: point.x-5,y: point.y-5), size: CGSize(width: 10.0, height: 10.0)))
-                texture.drawAtPoint(point, blendMode: kCGBlendModeNormal, alpha: 1.0)
-
-            }
-            
-            //UIGraphicsEndImageContext()
-            prevPoint = currentPoint
-                //move to here
-                //UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
-//                if((incrementalImage) != nil) {
-//                    var rectpath:UIBezierPath = UIBezierPath(rect: self.bounds)
-//                    UIColor.whiteColor().setFill()
-//                    rectpath.fill()
-//                }
-                
-                if (incrementalImage != nil) {
-                incrementalImage.drawAtPoint(CGPointZero)
-                }
-                
-                //UIColor(patternImage: UIImage(named: "brush.png")!).setStroke()
-                
-                //UIGraphicsEndImageContext()
-
-                incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
-                
-
-                
-            }
             
         }
         println("drawRect")
@@ -135,6 +93,31 @@ class canvas: UIView {
         } else {
             self.setNeedsDisplay()
             currentPoint = p
+            
+            
+            if (currentPoint != nil && prevPoint != nil) {
+                UIGraphicsBeginImageContext(self.frame.size)
+                
+//                var vector:CGPoint = CGPointMake(currentPoint.x-prevPoint.x, currentPoint.y-prevPoint.y)
+//                var distance:CGFloat = CGFloat(hypotf(Float(vector.x), Float(vector.y)))
+//                vector.x /= distance
+//                vector.y /= distance
+                //var point:CGPoint!
+//                for (var i:CGFloat = 0.0; i < distance; i += 1.0) {
+//                    point = CGPointMake(currentPoint.x + i * vector.x, currentPoint.y + i * vector.y)
+//                    //texture.drawInRect(CGRect(origin: CGPoint(x: point.x-5,y: point.y-5), size: CGSize(width: 10.0, height: 10.0)))
+//                    texture.drawAtPoint(point, blendMode: kCGBlendModeNormal, alpha: 1.0)
+//                }
+                
+                var iv = UIImageView(frame: CGRect(x: p.x-10, y: p.y-10, width: 20, height: 20))
+                iv.image = texture
+                self.addSubview(iv)
+                
+                UIGraphicsEndImageContext()
+                prevPoint = currentPoint
+            }
+
+            
         }
         println("touchesMoved")
     }
@@ -146,12 +129,23 @@ class canvas: UIView {
             path.removeAllPoints()
             ctr = 0
         }
+        else{
+            UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 2.0)
+            self.layer.renderInContext(UIGraphicsGetCurrentContext())
+            var image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            for view in self.subviews {
+                view.removeFromSuperview()
+            }
+            self.addSubview(UIImageView(image: image))
+        }
         
         println("touchesEnded")
     }
     
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
         self.touchesEnded(touches, withEvent: event)
+        
         println("touchesCancelled")
     }
     
