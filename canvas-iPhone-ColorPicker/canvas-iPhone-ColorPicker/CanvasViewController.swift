@@ -12,8 +12,8 @@ class CanvasViewController: UIViewController, FCColorPickerViewControllerDelegat
 
     override func viewDidAppear(animated: Bool) {
         var colorPicker:FCColorPickerViewController = FCColorPickerViewController.colorPicker()
-        
-        colorPicker.tintColor = UIColor(red: 45.0, green: 47.0, blue: 56.0, alpha: 1.0)
+        colorPicker.tintColor = UIColor(red: 149.0/255.0, green: 165.0/255.0, blue: 166.0/255.0, alpha: 1.0)
+        colorPicker.backgroundColor = UIColor(red: 236.0/255.0, green: 240.0/255.0, blue: 241/255.0, alpha: 1.0)
         colorPicker.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
         colorPicker.delegate = self
         self.presentViewController(colorPicker, animated: true, completion: nil)

@@ -26,6 +26,7 @@
 		C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5381A85CCB9001D870D /* SwiftRegex.swift */; };
 		C9A884F11A87677300D709C2 /* brush2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884F01A87677300D709C2 /* brush2.png */; };
 		C9A884F31A876A2000D709C2 /* brush3.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884F21A876A2000D709C2 /* brush3.png */; };
+		C9A884F51A87718800D709C2 /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884F41A87718800D709C2 /* eraser.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C98BE5381A85CCB9001D870D /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		C9A884F01A87677300D709C2 /* brush2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush2.png; sourceTree = "<group>"; };
 		C9A884F21A876A2000D709C2 /* brush3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush3.png; sourceTree = "<group>"; };
+		C9A884F41A87718800D709C2 /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eraser.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				C96F9EC81A85A2B700AF545D /* AppDelegate.swift */,
 				C96F9F031A85A59900AF545D /* socketio.swift */,
 				C9A884F21A876A2000D709C2 /* brush3.png */,
+				C9A884F41A87718800D709C2 /* eraser.png */,
 				C9A884F01A87677300D709C2 /* brush2.png */,
 				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A884F11A87677300D709C2 /* brush2.png in Resources */,
+				C9A884F51A87718800D709C2 /* eraser.png in Resources */,
 				C9A884F31A876A2000D709C2 /* brush3.png in Resources */,
 				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
 				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,

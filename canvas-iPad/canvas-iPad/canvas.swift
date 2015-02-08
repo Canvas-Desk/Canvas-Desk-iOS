@@ -26,8 +26,11 @@ class canvas: UIView {
         if tool == 2 {
             texture = UIImage(named: "brush2.png")
         }
-        if tool == 3 {
+        else if tool == 3 {
             texture = UIImage(named: "brush3.png")
+        }
+        else if tool == 4 {
+            texture = UIImage(named: "eraser.png")
         }
         self.multipleTouchEnabled = false
         self.backgroundColor = UIColor.whiteColor()
@@ -39,8 +42,11 @@ class canvas: UIView {
         if tool == 2 {
             texture = UIImage(named: "brush2.png")
         }
-        if tool == 3 {
+        else if tool == 3 {
             texture = UIImage(named: "brush3.png")
+        }
+        else if tool == 4 {
+            texture = UIImage(named: "eraser.png")
         }
     }
     

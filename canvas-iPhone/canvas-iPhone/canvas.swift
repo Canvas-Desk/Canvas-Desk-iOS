@@ -40,6 +40,7 @@ class canvas: UIView {
     */
     override func drawRect(rect: CGRect) {
         color.setStroke()
+        path.lineCapStyle = kCGLineCapRound
         incrementalImage.drawInRect(rect)
         path.stroke()
     }
