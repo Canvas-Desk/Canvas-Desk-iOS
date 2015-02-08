@@ -39,4 +39,13 @@ func ioDelegates(){
         universalCanvas.tool = data as Int
         universalCanvas.setTexture()
     }
+    
+    io.on("updateImageData") {data in
+        println("updateImageData")
+        
+        var nsdata = NSData(base64EncodedString: data as String, options: NSDataBase64DecodingOptions.allZeros)
+        var image = UIImage(data: nsdata!)
+        universalCanvas.tool = 5
+        universalCanvas.texture = image
+    }
 }
