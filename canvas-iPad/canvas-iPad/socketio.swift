@@ -36,6 +36,13 @@ func ioDelegates(){
     
     io.on("updateBrush") {data in
         println("updateBrush")
+        if( data as Int == 4) {
+            println("eraser")
+            universalCanvas.tool = 1
+            universalCanvas.color = UIColor.whiteColor()
+        } else {
         universalCanvas.tool = data as Int
+        universalCanvas.setTexture()
+        }
     }
 }

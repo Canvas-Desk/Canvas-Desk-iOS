@@ -24,8 +24,8 @@
 		C98BE53A1A85CCB9001D870D /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */; };
 		C98BE53B1A85CCB9001D870D /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5371A85CCB9001D870D /* SocketIOClient.swift */; };
 		C98BE53C1A85CCB9001D870D /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98BE5381A85CCB9001D870D /* SwiftRegex.swift */; };
-		C9A884E51A8739EE00D709C2 /* brush3.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884E41A8739EE00D709C2 /* brush3.png */; };
 		C9A884F11A87677300D709C2 /* brush2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884F01A87677300D709C2 /* brush2.png */; };
+		C9A884F31A876A2000D709C2 /* brush3.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A884F21A876A2000D709C2 /* brush3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		C98BE5361A85CCB9001D870D /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
 		C98BE5371A85CCB9001D870D /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
 		C98BE5381A85CCB9001D870D /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
-		C9A884E41A8739EE00D709C2 /* brush3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush3.png; sourceTree = "<group>"; };
 		C9A884F01A87677300D709C2 /* brush2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush2.png; sourceTree = "<group>"; };
+		C9A884F21A876A2000D709C2 /* brush3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brush3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				C96F9EF21A85A4A200AF545D /* canvas-iPad-Bridging-Header.h */,
 				C96F9EC81A85A2B700AF545D /* AppDelegate.swift */,
 				C96F9F031A85A59900AF545D /* socketio.swift */,
-				C9A884E41A8739EE00D709C2 /* brush3.png */,
+				C9A884F21A876A2000D709C2 /* brush3.png */,
 				C9A884F01A87677300D709C2 /* brush2.png */,
 				C96F9ECA1A85A2B700AF545D /* CanvasViewController.swift */,
 				C96F9ECC1A85A2B700AF545D /* Main.storyboard */,
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9A884F11A87677300D709C2 /* brush2.png in Resources */,
-				C9A884E51A8739EE00D709C2 /* brush3.png in Resources */,
+				C9A884F31A876A2000D709C2 /* brush3.png in Resources */,
 				C96F9ECE1A85A2B700AF545D /* Main.storyboard in Resources */,
 				C96F9ED31A85A2B700AF545D /* LaunchScreen.xib in Resources */,
 				C96F9ED01A85A2B700AF545D /* Images.xcassets in Resources */,

@@ -35,6 +35,15 @@ class canvas: UIView {
         path.lineWidth = lineWidth
     }
     
+    func setTexture() {
+        if tool == 2 {
+            texture = UIImage(named: "brush2.png")
+        }
+        if tool == 3 {
+            texture = UIImage(named: "brush3.png")
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         println("hi")
@@ -113,7 +122,9 @@ class canvas: UIView {
             for view in self.subviews {
                 view.removeFromSuperview()
             }
-            self.addSubview(UIImageView(image: image))
+            var newView:UIImageView = UIImageView(image: image)
+            self.addSubview(newView)
+            self.sendSubviewToBack(newView)
         }
         println("touchesEnded")
     }
