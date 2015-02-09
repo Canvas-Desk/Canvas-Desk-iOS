@@ -25,6 +25,7 @@ func ioDelegates(){
     io.on("updateBrushSize") {data in
         println("updateBrushSize")
         universalCanvas.lineWidth = data as CGFloat
+        println(data as CGFloat)
     }
     
     io.on("updateColor") {data in

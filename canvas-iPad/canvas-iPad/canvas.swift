@@ -86,6 +86,7 @@ class canvas: UIView {
         //UIColor(patternImage: UIImage(named: "brush.png")!).setStroke()
         if tool == 1 {
             color.setStroke()
+            path.lineWidth = lineWidth
             path.lineCapStyle = kCGLineCapRound
             incrementalImage.drawInRect(rect)
             path.stroke()
@@ -170,6 +171,7 @@ class canvas: UIView {
             
             //UIColor(patternImage: UIImage(named: "brush.png")!).setStroke()
             color.setStroke()
+            path.lineWidth = lineWidth
             path.stroke()
             incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
